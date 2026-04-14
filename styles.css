@@ -1,0 +1,342 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+/* CONFIGURACIÓN BASE */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    flex-direction: column;
+    
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: -4;
+}
+
+main {
+   width: 100%;
+   padding: 60px;
+   display: flex;
+   flex-direction: row;
+   flex: 1;
+
+}
+
+main h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: white;
+}
+p{
+    color: #ccc;
+    text-align: center;
+}
+
+/* FONDOS POR PAGINA */
+.home {
+    background-image: url("https://w0.peakpx.com/wallpaper/185/473/HD-wallpaper-triumph-daytona-675-racing-motorcycles-garage-race-track-new-black-daytona-675-british-motorcycles-triumph.jpg");
+}
+
+.sport {
+    background-image: url("https://img.freepik.com/fotos-premium/viaje-rapido-fin-pista-carreras-estadio-carreras-focos-brillantes-imagen-profesional-4k_660230-31618.jpg?semt=ais_hybrid&w=740&q=80");
+}
+
+.offroad {
+    background-image: url("https://previews.123rf.com/images/khlongwangchao/khlongwangchao1507/khlongwangchao150700428/42847730-off-road-track-in-country.jpg");
+}
+
+.adventure {
+    background-image: url("https://image.slidesdocs.com/responsive-images/background/landscape-scenery-travel-desert-road-powerpoint-background_4b95230710__960_540.jpg");
+}
+/* =========================
+   NAVBAR (MINIMALISTA)
+========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid red;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+
+/* MENU */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    position: relative;
+    transition: 0.3s;
+}
+nav a::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: red;
+    transition: 0.3s;
+}
+/* HOVER FINO */
+nav a:hover {
+    color: white;
+}
+
+nav a:hover::after {
+    width: 100%;;
+}
+/* =========================
+   DROPDOWN (ELEGANTE)
+========================= */
+/* CONTENEDOR */
+.dropdown {
+    position: relative;
+}
+
+/* SUBMENU */
+.submenu {
+    position: absolute;
+    top: 100%; /* 👈 clave: pegado al menu */
+    left: 0;
+    background: rgba(0,0,0,0.95);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+
+    /* OCULTO */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+/* ITEMS */
+.submenu li {
+    padding: 10px 20px;
+}
+
+/* LINKS */
+.submenu li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* HOVER ITEM */
+.submenu li:hover a {
+    color: white;
+}
+
+/* MOSTRAR SIN QUE SE CORTE */
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* MOSTRAR */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+/* BOTON SIMPLE */
+.btn{
+    margin-top: 15px;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+    background: red;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+}
+
+
+/* =========================
+   CARDS (ULTRA CLEAN)
+========================= */
+.card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    border:1px solid #ffffff1a;
+    box-sizing: border-box;
+    margin: 40px;
+   
+}
+
+/* IMAGEN */
+.card-img {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+
+}
+
+/* TEXTO */
+.card h3 {
+    color: white;
+    margin: 30px ;
+    text-align: center;
+    
+    
+}
+
+.card p {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0 10px;
+    line-height: 1.6;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* PRECIO */
+.price {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+/* EFECTO HOVER ELEGANTE */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    body{
+        padding: 20px;
+        text-align: center;
+    }
+
+}
+/* =========================
+   LOADER (PANTALLA DE CARGA)
+========================= */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: black; /* fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    /* animación de salida */
+    animation: desaparecer 1s ease forwards;
+}
+
+/* GIF */
+.loader img {
+    width: 100px;
+}
+
+/* ANIMACIÓN */
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+footer p {
+    letter-spacing: 1px;
+}
