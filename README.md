@@ -126,4 +126,4 @@ Posibles mejoras para el proyecto:
 
 👨‍💻 Autor
 
-Proyecto desarrollado por El Vander como práctica de desarrollo web.
+Proyecto desarrollado por Vanderley Castro y Joseph Bolivar como práctica de desarrollo web.
